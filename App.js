@@ -1,23 +1,20 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
-import Config from "./src/assets/Config";
-import Media from "./src/conference/Media";
+import "react-native-gesture-handler";
+import * as React from "react";
+import { View, Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
+import Home from "./src/Home";
+import Login from "./src/user/Login";
+
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Media />
-      <Text>Welcome to TheMedPG My student Umesh Bilagi!</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Login" component={Login} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 0.6,
-    backgroundColor: Config.BGColor,
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});

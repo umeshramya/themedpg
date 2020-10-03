@@ -1,13 +1,17 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 
 export default function Media(props) {
-  return <View style={styles.Container}></View>;
+  return (
+    <View style={styles.Container}>
+      <Text>Media</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.4,
+    flex: 1,
     backgroundColor: "#0099ff",
     width: "100%",
     height: "30%",
