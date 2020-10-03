@@ -5,7 +5,20 @@ export default function Home(props) {
   return (
     <View style={styles.style}>
       <Text>Home</Text>
-      <Button>Login</Button>
+      <Button
+        title="Login"
+        onPress={() => {
+          props.navigation.navigate("Login");
+        }}
+      />
+      <Text></Text>
+
+      <Button
+        title="Live Class"
+        onPress={() => {
+          props.navigation.navigate("Login");
+        }}
+      />
     </View>
   );
 }
